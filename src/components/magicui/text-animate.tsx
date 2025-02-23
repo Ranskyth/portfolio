@@ -144,7 +144,7 @@ const defaultItemAnimationVariants: Record<
     container: defaultContainerVariants,
     item: {
       hidden: { opacity: 0, filter: "blur(10px)", y: 20 },
-      show: (delay: number) => ({
+      show: () => ({
         opacity: 1,
         filter: "blur(0px)",
         y: 0,
@@ -170,7 +170,7 @@ const defaultItemAnimationVariants: Record<
     container: defaultContainerVariants,
     item: {
       hidden: { opacity: 0, filter: "blur(10px)", y: -20 },
-      show: (delay: number) => ({
+      show: () => ({
         opacity: 1,
         filter: "blur(0px)",
         y: 0,
@@ -302,9 +302,6 @@ const defaultItemAnimationVariants: Record<
 
 export function TextAnimate({
   children,
-  delay = 0,
-  duration = 0.3,
-  variants,
   className,
   segmentClassName,
   as: Component = "p",
