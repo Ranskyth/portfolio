@@ -7,37 +7,31 @@ const reviews = [
     name: "Lucas",
     username: "@lucas",
     body: "Profissional excelente! Entregou exatamente o que eu precisava, com qualidade e no prazo.",
-    img: "https://avatar.vercel.sh/lucas",
   },
   {
     name: "Ana",
     username: "@ana",
     body: "Ótima experiência! Comunicação clara e código bem estruturado. Recomendo demais!",
-    img: "https://avatar.vercel.sh/ana",
   },
   {
     name: "Pedro",
     username: "@pedro",
     body: "Muito competente e atencioso. Resolveu meu problema rapidamente. Trabalho impecável!",
-    img: "https://avatar.vercel.sh/pedro",
   },
   {
     name: "Mariana",
     username: "@mariana",
     body: "Serviço de altíssima qualidade! Entregou tudo como prometido e ainda deu ótimas sugestões.",
-    img: "https://avatar.vercel.sh/mariana",
   },
   {
     name: "Gabriel",
     username: "@gabriel",
     body: "Excelente profissional! Muito conhecimento técnico e compromisso com o projeto.",
-    img: "https://avatar.vercel.sh/gabriel",
   },
   {
     name: "Juliana",
     username: "@juliana",
     body: "Superou minhas expectativas! Profissional dedicado e entrega impecável.",
-    img: "https://avatar.vercel.sh/juliana",
   },
 ];
 
@@ -46,7 +40,6 @@ const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
 const ReviewCard = ({
-  img,
   name,
   username,
   body,
@@ -67,7 +60,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <Image className="rounded-full" width="32" height="32" alt="" src={img} />
+      
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
