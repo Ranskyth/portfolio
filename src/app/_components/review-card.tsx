@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import Image from "next/image";
 
 const reviews = [
   {
@@ -44,7 +43,6 @@ const ReviewCard = ({
   username,
   body,
 }: {
-  img: string;
   name: string;
   username: string;
   body: string;
