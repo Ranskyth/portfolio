@@ -21,9 +21,6 @@ export default function Page() {
               <Link href="#projects" className="transition-colors hover:text-foreground/80">
                 Projects
               </Link>
-              <Link href="#reviews" className="transition-colors hover:text-foreground/80">
-                Reviews
-              </Link>
             </nav>
           </div>
         </div>
