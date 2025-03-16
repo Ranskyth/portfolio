@@ -27,7 +27,8 @@ export default function ProjectCard({
       <div className="relative aspect-video">
         <Image
           src={image}
-          alt={title}
+          alt={"title"}
+       
           fill
           className="object-cover transition-transform hover:scale-105"
         />
