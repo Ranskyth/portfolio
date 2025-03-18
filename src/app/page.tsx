@@ -43,8 +43,8 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <TextAnimate className="uppercase font-bold line leading-[.75rem] text-[14px] md:text-[21px] text-left">Oi Eu Sou o Gabriel</TextAnimate>
-                <TextAnimate className="  font-bold tracking-tighter text-[4.2rem] leading-[1.05] md:text-[8.5rem]" animation="slideUp" by="word">Full Stack Developer</TextAnimate>
-                  <TextAnimate className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">🚀 Transforme sua ideia em uma experiência digital impactante! Com soluções modernas, eficientes e personalizadas, eu ajudo a levar seu projeto para o próximo nível. Vamos construir algo incrível juntos! 💡</TextAnimate> 
+                <TextAnimate className="  font-bold tracking-tighter text-left text-[4.2rem] leading-[1.05] sm:text-[8.5rem]" animation="slideUp" by="word">Full Stack Developer</TextAnimate>
+                  <TextAnimate className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">🚀 Vamos construir algo incrível juntos! 💡</TextAnimate> 
               </div>
               <div className="space-x-4">
                 <Link href="https://github.com/Ranskyth" target="_blank">
@@ -75,14 +75,14 @@ export default function Page() {
                 description="📖 Esta aplicação é uma Wiki interativa sobre os personagens de Naruto, desenvolvida com Angular para uma experiência dinâmica e envolvente! 🍥"
                 image="https://raw.githubusercontent.com/Ranskyth/wiki-naruto-angular/refs/heads/master/assets/img.png"
                 link="https://github.com/Ranskyth/wiki-naruto-angular"
-                tags={["Angula"]}
+                tags={["Angular"]}
                 isDeploy={true}
                 deploy="https://wiki-naruto-angular.vercel.app/"
               />
               <ProjectCard
                 title="Aluno Api"
                 description="🛠️ Esta API em ASP.NET Core foi desenvolvida para gerenciar alunos, utilizando PostgreSQL em Docker para máxima eficiência e escalabilidade. 🚀"
-                image="https://workana.s3.amazonaws.com/portfolios/ih/32fb180193ae06931f45db6912ad1b6b/Capturadetelade20241224122013.png?response-content-disposition=inline%3Bfilename%3D%22Captura%20de%20tela%20de%202024-12-24%2012-20-13.png%22&response-content-type=image%2Fpng&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA33COQEVTJSIXHA73%2F20250315%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250315T191347Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=3c5cec1734696d97e19c832686c5567cf22482f4e3168fcf128e5f765f3fcdc4"
+                image="/assets/projects/aluno_api.png"
                 link="https://github.com/Ranskyth/AlunoAPI"
                 tags={["Asp.Net Core", "ef core", "docker", "postgres"]}
               />
@@ -97,7 +97,7 @@ export default function Page() {
               />
                 <ProjectCard
                 title="Newflix"
-                description="🖥️ Front-end desenvolvido com Next.js e Tailwind CSS, integrado à API ViaCEP para consulta de endereços de forma rápida e responsiva. 🚀"
+                description="New Flix é um projeto desenvolvido com Next.js e Tailwind CSS, que consome a API do TMDb usando Axios para exibir informações sobre filmes"
                 image="/assets/projects/newflix.png"
                 link="https://github.com/Ranskyth/newflix"
                 tags={["Next.js", "TailwindCSS"]}
