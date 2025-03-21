@@ -9,7 +9,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 export default function Page() {
   return (
     <div className="min-h-screen max bg-background">
-      <header className="sticky top-0 z-50 w-full border-b px-8 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky flex justify-center top-0 z-50 w-full border-b px-8 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center">
           <div className="mr-4 hidden md:flex">
             <Link className="mr-6 flex items-center space-x-2" href="/">
@@ -17,12 +17,12 @@ export default function Page() {
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
               <Link href="#about" className="transition-colors hover:text-foreground/80">
-                About
+                Inicio
               </Link>
               <Link href="#projects" className="transition-colors hover:text-foreground/80">
-                Projects
+                Projetos
               </Link>
-              <Link href="#stack" className="transition-colors hover:text-foreground/80">Stack</Link>
+              <Link href="#stack" className="transition-colors hover:text-foreground/80">Tecnologias</Link>
             </nav>
           </div>
           <div className="self-center flex w-full gap-2 justify-end ">
@@ -68,7 +68,7 @@ export default function Page() {
         </section>
         <section id="projects" className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Projects</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Projetos</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <ProjectCard
                 title="Naruto Wiki"
@@ -104,6 +104,24 @@ export default function Page() {
                 isDeploy={true}
                 deploy="https://newflix-sage.vercel.app"
               />
+                              <ProjectCard
+                title="Newflix"
+                description="🔑 Gerador de senhas aleatórias feito com HTML, CSS e JavaScript. 🖥️"
+                image="/assets/projects/gen_senhas.png"
+                link="https://github.com/Ranskyth/Gerador_de_Senhas"
+                tags={["HTML", "CSS", "Javascript"]}
+                isDeploy={true}
+                deploy="https://ranskyth.github.io/Gerador_de_Senhas"
+              />
+                                            <ProjectCard
+                title="React Imc Calc"
+                description="Esta aplicação é uma calculadora de IMC simples, desenvolvida com React ⚛️."
+                image="/assets/projects/imc_calc.png"
+                link="https://github.com/Ranskyth/React_IMC_Calc"
+                tags={["React"]}
+                isDeploy={true}
+                deploy="https://imc-calc-coal.vercel.app"
+              />
             </div>
           </div>
         </section>
@@ -111,7 +129,7 @@ export default function Page() {
         <section id="stack" className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
-              Tech Stack
+              Tecnologias
             </h2>
             <TechStack />
           </div>
