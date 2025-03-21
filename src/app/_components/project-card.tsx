@@ -9,7 +9,6 @@ interface ProjectCardProps {
   image: string;
   link: string;
   deploy?: string;
-  isDeploy?: boolean;
   tags: string[];
 }
 
@@ -20,7 +19,6 @@ export default function ProjectCard({
   link,
   tags,
   deploy,
-  isDeploy,
 }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -56,7 +54,7 @@ export default function ProjectCard({
           <Github className="h-4 w-4" />
           View on GitHub
         </Link>
-        {isDeploy ? (
+        {deploy != undefined ? (
           <Link
             href={deploy || ""}
             target="_blank"

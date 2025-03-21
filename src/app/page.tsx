@@ -76,7 +76,7 @@ export default function Page() {
                 image="https://raw.githubusercontent.com/Ranskyth/wiki-naruto-angular/refs/heads/master/assets/img.png"
                 link="https://github.com/Ranskyth/wiki-naruto-angular"
                 tags={["Angular"]}
-                isDeploy={true}
+           
                 deploy="https://wiki-naruto-angular.vercel.app/"
               />
               <ProjectCard
@@ -92,7 +92,7 @@ export default function Page() {
                 image="https://raw.githubusercontent.com/Ranskyth/consulta_web_cep/refs/heads/main/assets/Captura.png"
                 link="https://github.com/Ranskyth/consulta_web_cep"
                 tags={["Next.js", "TailwindCSS"]}
-                isDeploy={true}
+           
                 deploy="https://consultawebcep.vercel.app/"
               />
                 <ProjectCard
@@ -101,7 +101,7 @@ export default function Page() {
                 image="/assets/projects/newflix.png"
                 link="https://github.com/Ranskyth/newflix"
                 tags={["Next.js", "TailwindCSS"]}
-                isDeploy={true}
+               
                 deploy="https://newflix-sage.vercel.app"
               />
                               <ProjectCard
@@ -110,7 +110,7 @@ export default function Page() {
                 image="/assets/projects/gen_senhas.png"
                 link="https://github.com/Ranskyth/Gerador_de_Senhas"
                 tags={["HTML", "CSS", "Javascript"]}
-                isDeploy={true}
+            
                 deploy="https://ranskyth.github.io/Gerador_de_Senhas"
               />
                                             <ProjectCard
@@ -119,7 +119,7 @@ export default function Page() {
                 image="/assets/projects/imc_calc.png"
                 link="https://github.com/Ranskyth/React_IMC_Calc"
                 tags={["React"]}
-                isDeploy={true}
+               
                 deploy="https://imc-calc-coal.vercel.app"
               />
             </div>
