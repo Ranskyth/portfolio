@@ -92,7 +92,6 @@ export default function Page() {
                 image="https://raw.githubusercontent.com/Ranskyth/consulta_web_cep/refs/heads/main/assets/Captura.png"
                 link="https://github.com/Ranskyth/consulta_web_cep"
                 tags={["Next.js", "TailwindCSS"]}
-           
                 deploy="https://consultawebcep.vercel.app/"
               />
                 <ProjectCard
@@ -101,11 +100,10 @@ export default function Page() {
                 image="/assets/projects/newflix.png"
                 link="https://github.com/Ranskyth/newflix"
                 tags={["Next.js", "TailwindCSS"]}
-               
                 deploy="https://newflix-sage.vercel.app"
               />
                               <ProjectCard
-                title="Newflix"
+                title="Gerador de Senhas"
                 description="🔑 Gerador de senhas aleatórias feito com HTML, CSS e JavaScript. 🖥️"
                 image="/assets/projects/gen_senhas.png"
                 link="https://github.com/Ranskyth/Gerador_de_Senhas"
