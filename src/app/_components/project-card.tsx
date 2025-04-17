@@ -6,7 +6,7 @@ import Link from "next/link";
 interface ProjectCardProps {
   title: string;
   description: string;
-  image: string;
+  image?: string;
   link: string;
   deploy?: string;
   tags: string[];
@@ -24,7 +24,7 @@ export default function ProjectCard({
     <Card className="overflow-hidden">
       <div className="relative aspect-video">
         <Image
-          src={image}
+          src={image || "https://fakeimg.pl/580x320?text=em+Desenvolvimento&font=bebas"}
           alt={"title"}
        
           fill

@@ -70,12 +70,20 @@ export default function Page() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Projetos</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <ProjectCard
+                title="Solp Pet"
+                description="Sistema de Pet Shop Simples"
+                link="https://github.com/Ranskyth/solp-pet-frontend"
+                tags={["Next.js","Vercel","Nest.js","Render", "Prisma", "Postgres", "Tailwind"]}
+           
+                deploy="https://solp-pet-frontend.vercel.app/"
+              />
               <ProjectCard
                 title="Naruto Wiki"
                 description="📖 Esta aplicação é uma Wiki interativa sobre os personagens de Naruto, desenvolvida com Angular para uma experiência dinâmica e envolvente! 🍥"
                 image="https://raw.githubusercontent.com/Ranskyth/wiki-naruto-angular/refs/heads/master/assets/img.png"
                 link="https://github.com/Ranskyth/wiki-naruto-angular"
-                tags={["Angular"]}
+                tags={["Angular", "Vercel"]}
            
                 deploy="https://wiki-naruto-angular.vercel.app/"
               />
@@ -91,7 +99,7 @@ export default function Page() {
                 description="🖥️ Front-end desenvolvido com Next.js e Tailwind CSS, integrado à API ViaCEP para consulta de endereços de forma rápida e responsiva. 🚀"
                 image="https://raw.githubusercontent.com/Ranskyth/consulta_web_cep/refs/heads/main/assets/Captura.png"
                 link="https://github.com/Ranskyth/consulta_web_cep"
-                tags={["Next.js", "TailwindCSS"]}
+                tags={["Next.js", "TailwindCSS", "Vercel"]}
                 deploy="https://consultawebcep.vercel.app/"
               />
                 <ProjectCard
@@ -99,7 +107,7 @@ export default function Page() {
                 description="New Flix é um projeto desenvolvido com Next.js e Tailwind CSS, que consome a API do TMDb usando Axios para exibir informações sobre filmes"
                 image="/assets/projects/newflix.png"
                 link="https://github.com/Ranskyth/newflix"
-                tags={["Next.js", "TailwindCSS"]}
+                tags={["Next.js", "TailwindCSS", "Vercel"]}
                 deploy="https://newflix-sage.vercel.app"
               />
                               <ProjectCard
@@ -107,7 +115,7 @@ export default function Page() {
                 description="🔑 Gerador de senhas aleatórias feito com HTML, CSS e JavaScript. 🖥️"
                 image="/assets/projects/gen_senhas.png"
                 link="https://github.com/Ranskyth/Gerador_de_Senhas"
-                tags={["HTML", "CSS", "Javascript"]}
+                tags={["HTML", "CSS", "Javascript", "Github Pages"]}
             
                 deploy="https://ranskyth.github.io/Gerador_de_Senhas"
               />
@@ -116,7 +124,7 @@ export default function Page() {
                 description="Esta aplicação é uma calculadora de IMC simples, desenvolvida com React ⚛️."
                 image="/assets/projects/imc_calc.png"
                 link="https://github.com/Ranskyth/React_IMC_Calc"
-                tags={["React"]}
+                tags={["React","Vite", "Vercel"]}
                
                 deploy="https://imc-calc-coal.vercel.app"
               />
