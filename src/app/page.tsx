@@ -76,7 +76,7 @@ export default function Page() {
                 link="https://github.com/Ranskyth/solp-pet-frontend"
                 tags={["Next.js","Vercel","Nest.js","Render", "Prisma", "Postgres", "Tailwind"]}
            
-                deploy="https://solp-pet-frontend.vercel.app/"
+                deploy="https://solp-pet.vercel.app/"
               />
               <ProjectCard
                 title="Naruto Wiki"
