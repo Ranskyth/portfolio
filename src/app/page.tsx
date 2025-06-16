@@ -1,10 +1,11 @@
-import { Button } from "@/components/ui/button"
-import { Download, Github, Linkedin, Twitter } from "lucide-react"
-import Link from "next/link"
-import ProjectCard from "./_components/project-card"
-import TechStack from "./_components/tech-stack"
-import { TextAnimate } from "@/components/magicui/text-animate"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
+import Link from "next/link";
+import ProjectCard from "../components/_components/project-card";
+import TechStack from "../components/_components/tech-stack";
+import { TextAnimate } from "@/components/magicui/text-animate";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Page() {
   return (
@@ -13,25 +14,38 @@ export default function Page() {
         <div className="container flex h-14 items-center">
           <div className="mr-4 hidden md:flex">
             <Link className="mr-6 flex items-center space-x-2" href="/">
-              <span className="hidden font-bold sm:inline-block">Gabriel.dev</span>
+              <span className="hidden font-bold sm:inline-block">
+                Gabriel.dev
+              </span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Link href="#about" className="transition-colors hover:text-foreground/80">
+              <Link
+                href="#about"
+                className="transition-colors hover:text-foreground/80"
+              >
                 Inicio
               </Link>
-              <Link href="#projects" className="transition-colors hover:text-foreground/80">
+              <Link
+                href="#projects"
+                className="transition-colors hover:text-foreground/80"
+              >
                 Projetos
               </Link>
-              <Link href="#stack" className="transition-colors hover:text-foreground/80">Tecnologias</Link>
+              <Link
+                href="#stack"
+                className="transition-colors hover:text-foreground/80"
+              >
+                Tecnologias
+              </Link>
             </nav>
           </div>
           <div className="self-center flex w-full gap-2 justify-end ">
-            <ThemeToggle/>
+            <ThemeToggle />
             <div>
               <Link href={"/assets/GabrielLimaSantana.pdf"} target="_blank">
-              <Button variant="ghost" size="icon">
-                <Download/>
-              </Button>
+                <Button variant="ghost" size="icon">
+                  <Download />
+                </Button>
               </Link>
             </div>
           </div>
@@ -39,44 +53,76 @@ export default function Page() {
       </header>
       <main className="container px-4 md:px-6 max-w-[1380px] mx-auto">
         <section id="about" className="py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container m-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <TextAnimate className="uppercase font-bold line leading-[.75rem] text-[14px] md:text-[21px] text-left">Oi Eu Sou o Gabriel</TextAnimate>
-                <TextAnimate className="  font-bold tracking-tighter text-left text-[4.2rem] leading-[1.05] sm:text-[8.5rem]" animation="slideUp" by="word">Full Stack Developer</TextAnimate>
-                  <TextAnimate className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">🚀 Vamos construir algo incrível juntos! 💡</TextAnimate> 
-              </div>
-              <div className="space-x-4">
-                <Link href="https://github.com/Ranskyth" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <Github className="h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link href="https://www.linkedin.com/in/gabriel-lima-a54557169/" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <Linkedin className="h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link href="https://x.com/GaLima2205" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <Twitter className="h-4 w-4" />
-                  </Button>
-                </Link>
+                <div className="flex">
+                  <div>
+                    <TextAnimate className="uppercase font-bold line leading-[.75rem] text-[14px] md:text-[21px] text-left">
+                      Oi Eu Sou o Gabriel
+                    </TextAnimate>
+                    <TextAnimate
+                      className="  font-bold tracking-tighter text-left text-[4.2rem] leading-[1.05] sm:text-[8.5rem]"
+                      animation="slideUp"
+                      by="word"
+                    >
+                      Full Stack Developer
+                    </TextAnimate>
+                    <TextAnimate className="text-start max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                      🚀 Vamos construir algo incrível juntos! 💡
+                    </TextAnimate>
+
+                    <div className="mt-5 space-x-4 text-start">
+                      <Link href="https://github.com/Ranskyth" target="_blank">
+                        <Button variant="outline" size="icon">
+                          <SiGithub className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                      <Link
+                        href="https://www.linkedin.com/in/gabriel-lima-a54557169/"
+                        target="_blank"
+                      >
+                        <Button variant="outline" size="icon">
+                          <SiLinkedin className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                      <Link href="https://x.com/GaLima2205" target="_blank">
+                        <Button variant="outline" size="icon">
+                          <SiX className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+
+                  <img
+                    className="rounded-[50%] w-[20rem] h-[20rem]"
+                    src="https://github.com/ranskyth.png"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section id="projects" className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Projetos</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
+              Projetos
+            </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <ProjectCard
+              <ProjectCard
                 title="Solp Pet"
                 description="Sistema de Pet Shop Simples"
-                link="https://github.com/Ranskyth/solp-pet-frontend"
-                tags={["Next.js","Vercel","Nest.js","Render", "Prisma", "Postgres", "Tailwind"]}
-           
-                deploy="https://solp-pet.vercel.app/"
+                link="https://github.com/Ranskyth/solp-pet"
+                image="https://raw.githubusercontent.com/Ranskyth/solp-pet/refs/heads/main/assets/Captura%20de%20tela%20de%202025-05-27%2015-57-55.png"
+                tags={[
+                  "Next.js",
+                  "Vercel",
+                  "Nest.js",
+                  "Prisma",
+                  "Postgres",
+                  "Tailwind",
+                ]}
               />
               <ProjectCard
                 title="Naruto Wiki"
@@ -84,7 +130,6 @@ export default function Page() {
                 image="https://raw.githubusercontent.com/Ranskyth/wiki-naruto-angular/refs/heads/master/assets/img.png"
                 link="https://github.com/Ranskyth/wiki-naruto-angular"
                 tags={["Angular", "Vercel"]}
-           
                 deploy="https://wiki-naruto-angular.vercel.app/"
               />
               <ProjectCard
@@ -102,7 +147,7 @@ export default function Page() {
                 tags={["Next.js", "TailwindCSS", "Vercel"]}
                 deploy="https://consultawebcep.vercel.app/"
               />
-                <ProjectCard
+              <ProjectCard
                 title="Newflix"
                 description="New Flix é um projeto desenvolvido com Next.js e Tailwind CSS, que consome a API do TMDb usando Axios para exibir informações sobre filmes"
                 image="/assets/projects/newflix.png"
@@ -110,22 +155,20 @@ export default function Page() {
                 tags={["Next.js", "TailwindCSS", "Vercel"]}
                 deploy="https://newflix-sage.vercel.app"
               />
-                              <ProjectCard
+              <ProjectCard
                 title="Gerador de Senhas"
-                description="🔑 Gerador de senhas aleatórias feito com HTML, CSS e JavaScript. 🖥️"
+                description="Gerador de senhas aleatórias feito com HTML, CSS e JavaScript."
                 image="/assets/projects/gen_senhas.png"
                 link="https://github.com/Ranskyth/Gerador_de_Senhas"
                 tags={["HTML", "CSS", "Javascript", "Github Pages"]}
-            
                 deploy="https://ranskyth.github.io/Gerador_de_Senhas"
               />
-                                            <ProjectCard
-                title="React Imc Calc"
+              <ProjectCard
+                title="Calculadora IMC"
                 description="Esta aplicação é uma calculadora de IMC simples, desenvolvida com React ⚛️."
                 image="/assets/projects/imc_calc.png"
                 link="https://github.com/Ranskyth/React_IMC_Calc"
-                tags={["React","Vite", "Vercel"]}
-               
+                tags={["React", "Vite", "Vercel"]}
                 deploy="https://imc-calc-coal.vercel.app"
               />
             </div>
@@ -144,10 +187,12 @@ export default function Page() {
 
       <footer className="border-t">
         <div className="container flex flex-col gap-2 sm:flex-row py-6 shrink-0 items-center px-4 md:px-6">
-          <p className="text-xs text-gray-500 dark:text-gray-400"> &copy; 2025 Gabriel. All rights reserved.</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            {" "}
+            &copy; 2025 Gabriel. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }
-
