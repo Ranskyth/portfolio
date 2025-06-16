@@ -112,7 +112,7 @@ export default function Page() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <ProjectCard
                 title="Solp Pet"
-                description="Sistema de Pet Shop Simples"
+                description="Sistema de Pet Shop"
                 link="https://github.com/Ranskyth/solp-pet"
                 image="https://raw.githubusercontent.com/Ranskyth/solp-pet/refs/heads/main/assets/Captura%20de%20tela%20de%202025-05-27%2015-57-55.png"
                 tags={[
