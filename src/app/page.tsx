@@ -67,6 +67,12 @@ export default function Page() {
               >
                 Tecnologias
               </Link>
+              <Link
+                href="#contato"
+                className="transition-colors hover:text-foreground/80"
+              >
+                Contato
+              </Link>
             </nav>
           </div>
           <div className="self-center flex w-full gap-2 justify-end ">
@@ -126,7 +132,7 @@ export default function Page() {
 
                   <img
                     className="rounded-[50%] w-[20rem] h-[20rem]"
-                    src="https://github.com/ranskyth.png"
+                    src={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_PERFIL}.png`}
                     alt=""
                   />
                 </div>
@@ -189,7 +195,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="stack" className="py-12 md:py-24 lg:py-32">
+        <section id="contato" className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
               Contato
@@ -213,13 +219,19 @@ export default function Page() {
                     />
                     <Button
                       onClick={() => {
-                        toast.promise(() => new Promise((resolve) => setTimeout(() => resolve({}),2000)), {
-                          loading: "Enviando...",
-                          success: () => {
-                            return "Mensagem enviada com sucesso";
-                          },
-                          error: "Error",
-                        });
+                        toast.promise(
+                          () =>
+                            new Promise((resolve) =>
+                              setTimeout(() => resolve({}), 2000)
+                            ),
+                          {
+                            loading: "Enviando...",
+                            success: () => {
+                              return "Mensagem enviada com sucesso";
+                            },
+                            error: "Error",
+                          }
+                        );
                       }}
                       type="submit"
                       variant={"secondary"}
