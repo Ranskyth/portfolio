@@ -21,7 +21,7 @@ const technologies = [
 
 export default function TechStack() {
   return (
-      <div className="flex justify-center gap-5">
+      <div className="flex max-[650px]:flex-col justify-center gap-5">
       {technologies.map((tech) => (
         <Card key={tech.category} className="p-6">
           <h3 className="text-lg text-center font-semibold mb-4">{tech.category}</h3>

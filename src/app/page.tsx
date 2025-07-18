@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
@@ -15,7 +16,7 @@ import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
 export default function Page() {
-  const form = useRef<HTMLFormElement | null>(null);
+  const form = useRef<any>(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ export default function Page() {
       .sendForm(
         String(process.env.NEXT_PUBLIC_EMAIL_ID),
         String(process.env.NEXT_PUBLIC_EMAIL_TAMPLATE),
-        String(form.current),
+        form.current,
         {
           publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
         }
@@ -92,7 +93,7 @@ export default function Page() {
           <div className="container m-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="flex">
+                <div className="flex max-[990px]:flex-col-reverse">
                   <div>
                     <TextAnimate className="uppercase font-bold line leading-[.75rem] text-[14px] md:text-[21px] text-left">
                       Oi Eu Sou o Gabriel
@@ -131,7 +132,7 @@ export default function Page() {
                   </div>
 
                   <img
-                    className="rounded-[50%] w-[20rem] h-[20rem]"
+                    className="rounded-[50%] max-[990px]:mb-5 w-[20rem] h-[20rem]"
                     src={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_PERFIL}.png`}
                     alt=""
                   />
