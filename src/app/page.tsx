@@ -15,7 +15,7 @@ import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
 export default function Page() {
-  const form = useRef<HTMLFormElement | string>("");
+  const form = useRef<HTMLFormElement | null>(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ export default function Page() {
       .sendForm(
         String(process.env.NEXT_PUBLIC_EMAIL_ID),
         String(process.env.NEXT_PUBLIC_EMAIL_TAMPLATE),
-        form.current,
+        String(form.current),
         {
           publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
         }
