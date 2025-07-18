@@ -1,13 +1,43 @@
+"use client";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
 import Link from "next/link";
 import ProjectCard from "../components/_components/project-card";
 import TechStack from "../components/_components/tech-stack";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
+import { FormEvent, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 export default function Page() {
+  const form = useRef<HTMLFormElement | string>("");
+
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        String(process.env.NEXT_PUBLIC_EMAIL_ID),
+        String(process.env.NEXT_PUBLIC_EMAIL_TAMPLATE),
+        form.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <div className="min-h-screen max bg-background">
       <header className="sticky flex justify-center top-0 z-50 w-full border-b px-8 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -133,21 +163,6 @@ export default function Page() {
                 deploy="https://wiki-naruto-angular.vercel.app/"
               />
               <ProjectCard
-                title="Aluno Api"
-                description="🛠️ Esta API em ASP.NET Core foi desenvolvida para gerenciar alunos, utilizando PostgreSQL em Docker para máxima eficiência e escalabilidade. 🚀"
-                image="/assets/projects/aluno_api.png"
-                link="https://github.com/Ranskyth/AlunoAPI"
-                tags={["Asp.Net Core", "ef core", "docker", "postgres"]}
-              />
-              <ProjectCard
-                title="Consulta Web Cep"
-                description="🖥️ Front-end desenvolvido com Next.js e Tailwind CSS, integrado à API ViaCEP para consulta de endereços de forma rápida e responsiva. 🚀"
-                image="https://raw.githubusercontent.com/Ranskyth/consulta_web_cep/refs/heads/main/assets/Captura.png"
-                link="https://github.com/Ranskyth/consulta_web_cep"
-                tags={["Next.js", "TailwindCSS", "Vercel"]}
-                deploy="https://consultawebcep.vercel.app/"
-              />
-              <ProjectCard
                 title="Newflix"
                 description="New Flix é um projeto desenvolvido com Next.js e Tailwind CSS, que consome a API do TMDb usando Axios para exibir informações sobre filmes"
                 image="/assets/projects/newflix.png"
@@ -155,23 +170,13 @@ export default function Page() {
                 tags={["Next.js", "TailwindCSS", "Vercel"]}
                 deploy="https://newflix-sage.vercel.app"
               />
-              <ProjectCard
-                title="Gerador de Senhas"
-                description="Gerador de senhas aleatórias feito com HTML, CSS e JavaScript."
-                image="/assets/projects/gen_senhas.png"
-                link="https://github.com/Ranskyth/Gerador_de_Senhas"
-                tags={["HTML", "CSS", "Javascript", "Github Pages"]}
-                deploy="https://ranskyth.github.io/Gerador_de_Senhas"
-              />
-              <ProjectCard
-                title="Calculadora IMC"
-                description="Esta aplicação é uma calculadora de IMC simples, desenvolvida com React ⚛️."
-                image="/assets/projects/imc_calc.png"
-                link="https://github.com/Ranskyth/React_IMC_Calc"
-                tags={["React", "Vite", "Vercel"]}
-                deploy="https://imc-calc-coal.vercel.app"
-              />
             </div>
+          </div>
+          <div className="mt-2 w-full flex justify-center">
+            <Link href={"/projetos"} className=" text-[#858585] flex gap-1">
+              Ver Todos Projetos
+              <ArrowRight />
+            </Link>
           </div>
         </section>
 
@@ -181,6 +186,50 @@ export default function Page() {
               Tecnologias
             </h2>
             <TechStack />
+          </div>
+        </section>
+
+        <section id="stack" className="py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
+              Contato
+            </h2>
+            <div className="flex justify-center">
+              <div></div>
+              <form
+                onSubmit={sendEmail}
+                ref={form}
+                className="flex flex-col gap-5 w-[500px]"
+                action=""
+              >
+                <Card>
+                  <CardContent className="flex mt-5 flex-col gap-5">
+                    <Input name="name" placeholder="Seu Nome" />
+                    <Input name="email" placeholder="Seu Email" />
+                    <Textarea
+                      name="message"
+                      placeholder="Sua Mensagem"
+                      rows={4}
+                    />
+                    <Button
+                      onClick={() => {
+                        toast.promise(() => new Promise((resolve) => setTimeout(() => resolve({}),2000)), {
+                          loading: "Enviando...",
+                          success: () => {
+                            return "Mensagem enviada com sucesso";
+                          },
+                          error: "Error",
+                        });
+                      }}
+                      type="submit"
+                      variant={"secondary"}
+                    >
+                      Enviar
+                    </Button>
+                  </CardContent>
+                </Card>
+              </form>
+            </div>
           </div>
         </section>
       </main>
