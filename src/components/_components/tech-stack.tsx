@@ -6,11 +6,11 @@ const technologies = [
   },
   {
     category: "Backend",
-    skills: ["nodejs", "express", "nestjs", "fastify","elysiajs", "fiber", "springboot", "mysql", "postgresql", "mongodb"],
+    skills: ["nodejs", "express", "nestjs", "fastify", "elysiajs", "echo", "fiber", "springboot", "mysql", "postgresql", "mongodb"],
   },
   {
     category: "DevOps / Tools",
-    skills: ["docker", "git", "linux", "nginx", "apache","vscode", "github", "netlify", "vercel"],
+    skills: ["docker", "git", "linux", "nginx", "apache", "vscode", "github", "netlify", "vercel"],
   },
   {
     category: "languages",
