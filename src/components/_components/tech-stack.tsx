@@ -6,7 +6,7 @@ const technologies = [
   },
   {
     category: "Backend",
-    skills: ["nodejs", "express", "nestjs", "fastify", "elysiajs", "echo", "fiber", "springboot", "mysql", "postgresql", "mongodb"],
+    skills: ["nodejs", "express", "nestjs", "fastify", "elysiajs", "echo", "fiber", "mysql", "postgresql", "mongodb"],
   },
   {
     category: "DevOps / Tools",
@@ -14,7 +14,7 @@ const technologies = [
   },
   {
     category: "languages",
-    skills: ["javascript", "typescript", "java", "go"],
+    skills: ["javascript", "typescript", "go"],
   },
 
 ]
