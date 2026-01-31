@@ -1,0 +1,29 @@
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.hover {
+    transition: var(--transition-micro-medium);
+
+    &:hover {
+        transform: translateX(var(--static-space-8));
+
+        .indicator {
+            transform: rotate(0);
+        }
+    }
+}
+
+.indicator {
+    transform: rotate(-90deg);
+    left: -2rem;
+    transition: var(--transition-micro-medium);
+}
