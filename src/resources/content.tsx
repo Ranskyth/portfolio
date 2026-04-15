@@ -145,7 +145,7 @@ Sou um desenvolvedor fullstack, com paixão por transformar desafios complexos e
       {
         title: "Backend",
         description: (
-          <>APIs robustas com Node.js, Nest.js, Express, Elysia, Chi, Spring Boot Fastify e Bun.</>
+          <>APIs robustas com Node.js, Nest.js, Express, Elysia, Chi, Spring Boot, Fastify e Bun.</>
         ),
         tags: [
           {
